@@ -20,8 +20,8 @@ Release
 
 There are 3 levels of indentation in this TODO list. Lines 1 and 4 would have
 one color, lines 2, 3, 5, 8, and 9 another color, and lines 6 and 7 a third
-color. Each level of indentation has a different color (unless the random
-selection is the same), and all lines at that level share that color.
+color. Each level of indentation has a different color, and all lines at that
+level share that color.
 
 
 ## Functions
