@@ -2,7 +2,7 @@
 
 
 ## Introduction
-This very simple vim plugin will colorize the lines of lists and TODO files
+This vim plugin will colorize the lines of lists and TODO files
 with a random color based on the line's level of indentation.
 
 For example, consider this file (say, in project/TODO):
