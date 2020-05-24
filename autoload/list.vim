@@ -16,11 +16,10 @@ function! list#colorize()
 	" To get some random numbers for choosing the color at each indent level, we're going to dump some bytes from
 	" /dev/urandom and group them into numbers. We only need 10 numbers, but we're going to grab 50 so we have plenty to
 	" discard as duplicates arise.
-	" --read-bytes=100  read 100 bytes from /dev/urandom
-	" --width=100       put all 100 bytes onto one line (makes splitting easier)
-	" --format=u2       group into 2-byte unsigned numbers (this will produce 50 numbers)
-	" -An               don't print any line headers
-	let l:output = system('od --read-bytes=100 --width=100 --format=u2 -An < /dev/urandom')
+	" -N 50  read 50 bytes from /dev/urandom
+	" -t u1  group into 1-byte unsigned numbers (this will produce 50 numbers)
+	" -A n   don't print any headers/trailers
+	let l:output = system('od -N 50 -t u1 -A n < /dev/urandom | xargs')
 	for l:num in split(l:output)
 		" Choose an index in list_colors based on the random number.
 		let l:index = l:num % l:list_len
