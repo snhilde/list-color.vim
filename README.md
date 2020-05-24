@@ -45,4 +45,3 @@ This plugin will automatically operate on these files:
 - Currently, only tab indentation is supported.
 - The colors favor a darker color scheme, and there is no intelligence in choosing colors.
 - The color choices do not currently have any scheme, palette, or general order.
-- It's still possible to get dark colors on a dark background. The list is being slowly whittled down.
