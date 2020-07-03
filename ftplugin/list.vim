@@ -3,3 +3,9 @@ setlocal wrap
 setlocal autoindent
 setlocal foldmethod=indent
 setlocal foldlevel=10
+
+" Only build the line colors if we haven't already done so.
+if !exists("g:ListColored")
+	let g:ListColored = 1
+	call list#colorize()
+endif
