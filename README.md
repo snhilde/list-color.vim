@@ -1,3 +1,6 @@
+![Maintenance Badge](https://img.shields.io/badge/Maintained-yes-success)
+![Version Badge](https://img.shields.io/badge/Version-1.2-informational)
+
 # list-color.vim
 
 
