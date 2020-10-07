@@ -33,6 +33,9 @@ ListColorize
 ```
 Reassign the colors of all 10 indentation levels.
 
+To reassign all colors via a key command, you can use something like this mapping, which calls the function with Leader-c:
+`no <Leader>c :ListColorize<CR>`
+
 
 ## File types
 This plugin will automatically operate on these files:
