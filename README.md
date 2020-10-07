@@ -10,15 +10,15 @@ with a random color based on the line's level of indentation.
 
 For example, consider this file (say, in project/TODO):
 ```
-Write unit tests
-	Set up batches
-	Validate results
-Release
-	Package build
-		Determine system
-		Determine config
-	Finish notes
-	Send it out
+1 Write unit tests
+2 	Set up batches
+3 	Validate results
+4 Release
+5 	Package build
+6 		Determine system
+7 		Determine config
+8 	Finish notes
+9 	Send it out
 ```
 
 There are 3 levels of indentation in this TODO list. Lines 1 and 4 would have
