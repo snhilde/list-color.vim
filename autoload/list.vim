@@ -1,7 +1,11 @@
 " Pick 10 different colors from the list above at random, and colorize each line in the list based on its indentation level.
 function! list#colorize()
 	" These are all the colors that can be chosen for different indent levels.
-	let l:list_colors = [ "red", "lightred", "darkred", "magenta", "lightmagenta", "darkmagenta", "yellow", "lightyellow", "green", "lightgreen", "darkgreen", "lightblue", "cyan", "lightcyan", "darkcyan", "brown", "gray", "lightgray", "darkgray", "white" ]
+	if &background == "light"
+		let l:list_colors = [ "darkcyan", "darkgreen", "darkmagenta", "darkred", "brown", "magenta", "darkgray", "green", "gray", "red" ]
+	else
+		let l:list_colors = [ "lightred", "lightmagenta", "yellow", "lightyellow", "lightgreen", "lightblue", "cyan", "lightcyan", "lightgray", "darkgray", "white" ]
+	endif
 
 	" Set up some function variables.
 	let l:list_len = len(g:list_colors)
