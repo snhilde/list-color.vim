@@ -56,6 +56,5 @@ This plugin will automatically operate on these files:
 
 
 ## Open issues
+- A limited number of colors are supported, and the color choices do not currently have any scheme, palette, or general order.
 - Currently, only tab indentation is supported.
-- The colors favor a darker color scheme, and there is no intelligence in choosing colors.
-- The color choices do not currently have any scheme, palette, or general order.
