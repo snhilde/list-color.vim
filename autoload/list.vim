@@ -1,14 +1,22 @@
-" Pick 10 different colors from the list above at random, and colorize each line in the list based on its indentation level.
+if !exists("g:list_color_use_background")
+	let g:list_color_use_background = 1
+endif
+
+" Pick 10 different colors from the list below at random, and colorize each line in the list based on its indentation level.
 function! list#colorize()
 	" These are all the colors that can be chosen for different indent levels.
-	if &background == "light"
-		let l:list_colors = [ "darkcyan", "darkgreen", "darkmagenta", "darkred", "brown", "magenta", "darkgray", "green", "gray", "red" ]
+	if g:list_color_use_background
+		if &background == "light"
+			let l:list_colors = [ "darkcyan", "darkgreen", "darkmagenta", "darkred", "brown", "magenta", "darkgray", "green", "gray", "red" ]
+		else
+			let l:list_colors = [ "lightred", "lightmagenta", "yellow", "lightyellow", "lightgreen", "lightblue", "cyan", "lightcyan", "lightgray", "darkgray", "white" ]
+		endif
 	else
-		let l:list_colors = [ "lightred", "lightmagenta", "yellow", "lightyellow", "lightgreen", "lightblue", "cyan", "lightcyan", "lightgray", "darkgray", "white" ]
+		let l:list_colors = [ "red", "lightred", "darkred", "magenta", "lightmagenta", "darkmagenta", "yellow", "lightyellow", "green", "lightgreen", "darkgreen", "lightblue", "cyan", "lightcyan", "darkcyan", "brown", "gray", "lightgray", "darkgray", "white" ]
 	endif
 
 	" Set up some function variables.
-	let l:list_len = len(g:list_colors)
+	let l:list_len = len(l:list_colors)
 	let l:count = 0
 
 	" These dictionaries will hold values as we progress through the operations.
@@ -31,7 +39,7 @@ function! list#colorize()
 		if !has_key(l:nums, l:index)
 			" We haven't seen this index yet. Let's flag the index and then set a line's color.
 			let l:nums[l:index] = 1
-			exec "hi LIST" . l:count . " guifg=" . g:list_colors[l:index] . " guibg=NONE gui=NONE ctermfg=" . g:list_colors[l:index] . " ctermbg=NONE cterm=NONE"
+			exec "hi LIST" . l:count . " guifg=" . l:list_colors[l:index] . " guibg=NONE gui=NONE ctermfg=" . l:list_colors[l:index] . " ctermbg=NONE cterm=NONE"
 			let l:count += 1
 			if l:count == 10
 				" We've set colors for all 10 levels of indentation. We can be done now.

@@ -34,6 +34,14 @@ ListColorize
 Reassign the colors of all 10 indentation levels.
 
 
+## Settings
+```
+g:list_color_use_background
+```
+`0` - Do not choose line colors based on the `background` vim setting.
+`1` - (Default) Use darker line colors for `background`=`light` and lighter line colors for `background`=`dark`.
+
+
 ## File types
 This plugin will automatically operate on these files:
 * Files with the extension `.list`
