@@ -41,7 +41,7 @@ To reassign all colors via a key command, you can use something like this mappin
 ```
 g:list_color_use_background
 ```
-`0` - Do not choose line colors based on the `background` vim setting.
+`0` - Do not choose line colors based on the `background` vim setting.<br>
 `1` - (Default) Use darker line colors for `background`=`light` and lighter line colors for `background`=`dark`.
 
 
