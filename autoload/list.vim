@@ -9,7 +9,7 @@ function! list#colorize()
 		if &background == "light"
 			let l:list_colors = [ "darkcyan", "darkgreen", "darkmagenta", "darkred", "brown", "magenta", "darkgray", "green", "gray", "red" ]
 		else
-			let l:list_colors = [ "lightred", "lightmagenta", "yellow", "lightyellow", "lightgreen", "lightblue", "cyan", "lightcyan", "lightgray", "darkgray", "white" ]
+			let l:list_colors = [ "lightred", "lightmagenta", "yellow", "lightyellow", "lightgreen", "lightblue", "cyan", "lightcyan", "lightgray", "white" ]
 		endif
 	else
 		let l:list_colors = [ "red", "lightred", "darkred", "magenta", "lightmagenta", "darkmagenta", "yellow", "lightyellow", "green", "lightgreen", "darkgreen", "lightblue", "cyan", "lightcyan", "darkcyan", "brown", "gray", "lightgray", "darkgray", "white" ]
